@@ -35,6 +35,78 @@
       "choice": false,
       "new": true,
       "size": ["L", "XL"]
+    },
+    {
+      "id": 4,
+      "title": "모던 오버사이즈 트렌치코트",
+      "img": "https://images.unsplash.com/photo-1525450824231-13650d97f630?q=80&w=500",
+      "price": 129000,
+      "choice": true,
+      "new": true,
+      "size": ["M", "L", "XL"]
+    },
+    {
+      "id": 5,
+      "title": "베이직 피그먼트 후드티",
+      "img": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=500",
+      "price": 49000,
+      "choice": false,
+      "new": false,
+      "size": ["S", "M", "L", "XL"]
+    },
+    {
+      "id": 6,
+      "title": "와이드 턱 앤솔로지 슬랙스",
+      "img": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=500",
+      "price": 54000,
+      "choice": true,
+      "new": false,
+      "size": ["S", "M", "L"]
+    },
+    {
+      "id": 7,
+      "title": "헤비웨이트 미니멀 블루종",
+      "img": "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=500",
+      "price": 98000,
+      "choice": false,
+      "new": true,
+      "size": ["M", "L"]
+    },
+    {
+      "id": 8,
+      "title": "어반 데일리 볼캡",
+      "img": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=500",
+      "price": 25000,
+      "choice": true,
+      "new": true,
+      "size": ["FREE"]
+    },
+    {
+      "id": 9,
+      "title": "린넨 블렌드 반소매 셔츠",
+      "img": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=500",
+      "price": 39000,
+      "choice": false,
+      "new": false,
+      "size": ["M", "L", "XL"]
+    },
+    {
+      "id": 10,
+      "title": "카고 버뮤다 스웨트 팬츠",
+      "img": "https://images.unsplash.com/photo-1517462964-21fdcec3f25b?q=80&w=500",
+      "price": 42000,
+      "choice": true,
+      "new": true,
+      "size": ["M", "L"]
+    },
+    {
+      "id": 11,
+      "title": "헤링본 울 블렌드 재켓",
+      "img": "https://images.unsplash.com/photo-1544923246-77307dd654cb?q=80&w=500",
+      "price": 145000,
+      "choice": false,
+      "new": false,
+      "size": ["S", "M", "L"]
     }
   ]
 }
