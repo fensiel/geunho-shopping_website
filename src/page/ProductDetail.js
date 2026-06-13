@@ -26,9 +26,13 @@ const ProductDetail = () => {
     let allProducts = await response.json();
 
     // 로직: 현재 보고 있는 상품은 제외하고, 'choice가 true'이거나 '가격대가 비슷한' 상품 filter
+    // 데이터 타입 불일치 방지를 위해 String() 처리 적용
     let filtered = allProducts.filter(item => 
-      item.id !== currentProduct.id && (item.choice === true || Math.abs(item.price - currentProduct.price) <= 20000)
+      String(item.id) !== String(currentProduct.id) && (item.choice === true || Math.abs(item.price - currentProduct.price) <= 20000)
     );
+
+    // ✨ 추천 리스트를 무작위(랜덤)로 섞어주는 로직 추가
+    let shuffled = filtered.sort(() => Math.random() - 0.5);
 
     // 상위 2개만 추출해서 추천 리스트에 저장
     setRecommendations(filtered.slice(0, 2));
