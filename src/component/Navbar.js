@@ -3,26 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
 
-// 1. props로 authenticate와 setAuthenticate를 받아옵니다.
+// 💡 중요: 꼭 중괄호 { } 안에 authenticate와 setAuthenticate를 적어서 받아와야 합니다!
 const Navbar = ({ authenticate, setAuthenticate }) => {
     const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'Home', 'Sale', '지속가능성'];
     const navigate = useNavigate();
 
-    // 로그인 페이지로 이동하는 함수
     const goToLogin = () => {
         navigate("/login");
     };
 
-    // ✨ 로그아웃 처리 함수 추가
+    // 로그아웃을 처리해주는 함수
     const handleLogout = () => {
-        setAuthenticate(false); // 로그인 상태를 false로 변경
-        navigate("/"); // 로그아웃 후 메인 페이지로 이동
+        setAuthenticate(false); // 로그인 상태를 다시 false로!
+        navigate("/"); // 메인으로 튕겨내기
     };
 
     const search = (event) => {
         if (event.key === "Enter") {
             let keyword = event.target.value;
-            console.log("keyword", keyword);
             navigate(`/?q=${keyword}`);
         }
     };
@@ -30,14 +28,14 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     return (
         <div>
             <div>
-                {/* ✨ 2. authenticate 상태에 따라 로그인/로그아웃 버튼을 다르게 보여줍니다 (삼항연산자) */}
+                {/* 💡 여기가 핵심입니다! 로그인 상태에 따라 버튼이 스위치처럼 바뀝니다. */}
                 {authenticate ? (
-                    <div className="login-button" onClick={handleLogout}>
+                    <div className="login-button" onClick={handleLogout} style={{ cursor: 'pointer' }}>
                         <FontAwesomeIcon icon={faUser} />
                         <div>로그아웃</div>
                     </div>
                 ) : (
-                    <div className="login-button" onClick={goToLogin}>
+                    <div className="login-button" onClick={goToLogin} style={{ cursor: 'pointer' }}>
                         <FontAwesomeIcon icon={faUser} />
                         <div>로그인</div>
                     </div>
