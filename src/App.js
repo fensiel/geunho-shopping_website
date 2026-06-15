@@ -25,7 +25,7 @@ function App() {
   
   return (
     <div>
-      <Navbar/>
+    <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
         {/* 2. path와 element 내용을 채워주기 */}
         <Route path="/" element={<ProductAll/>}/>
