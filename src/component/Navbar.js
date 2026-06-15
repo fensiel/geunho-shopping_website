@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 // 💡 중요: 꼭 중괄호 { } 안에 authenticate와 setAuthenticate를 적어서 받아와야 합니다!
 const Navbar = ({ authenticate, setAuthenticate }) => {
-    const menuList = ['여성', '남성', '신생아/유아', '아동', 'Home', 'Sale', '지속가능성'];
+    const menuList = ['여성', '남성', '신생아/유아', '아동', 'Home', 'Sale'];
     const navigate = useNavigate();
 
     const goToLogin = () => {
